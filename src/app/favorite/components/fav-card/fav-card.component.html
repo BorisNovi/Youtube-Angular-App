@@ -1,0 +1,33 @@
+<div class="container">
+  <a class="video-link" routerLink="../detail/{{videoData.id}}">
+
+    <div class="content">
+      <div class="preview">
+        <img class="preview-image" [src]="videoData.snippet.thumbnails.standard.url" alt="preview">
+      </div>
+      <div class="description">
+        <div class="title">
+          <h2 class="title-header">{{videoData.snippet.title}}</h2>
+        </div>
+        <div class="stats">
+          <div class="stats-author">
+            <span class="stats-author-name">{{videoData.snippet.channelTitle}}</span>
+          </div>
+          <span>&nbsp;•&nbsp;</span>
+          <div class="stats-date">
+            <div class="stats-date-counter">{{videoData.snippet.publishedAt | date}}</div>
+          </div>
+          <span>&nbsp;•&nbsp;</span>
+          <div class="stats-views">
+            <span class="stats-views-counter">{{videoData.statistics.viewCount}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="favorite-button">
+    <button (click)="toggleFavorite()" mat-icon-button>
+      <mat-icon color="warn">{{isFavorite ? 'favorite' : 'favorite_border'}}</mat-icon>
+    </button>
+  </div>
+</div>

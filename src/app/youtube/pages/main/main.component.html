@@ -1,0 +1,4 @@
+<app-sorting-criteria-block *ngIf="isSortingOpen()"></app-sorting-criteria-block>
+<mat-paginator [length]="paginatorLength" [pageSize]="maxResultsOnPage" [pageIndex]="pageIndex" [disabled]="paginatorDisabled" (page)="handlePageEvent($event)"></mat-paginator>
+<app-search-results-block
+  [dataFromSearch]="dataForSearch | filter: keyword() | sort: sortParams()"></app-search-results-block>

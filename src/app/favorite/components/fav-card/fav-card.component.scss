@@ -1,0 +1,66 @@
+:host {
+  width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  min-width: 350px;
+  height: 130px;
+
+  .video-link {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+
+      .preview {
+        border-radius: 5px;
+        background-color: purple;
+        width: 168px;
+        height: 94px;
+
+        &-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .description {
+        align-self: flex-start;
+
+        .title {
+          text-decoration: none;
+        }
+
+        .stats {
+          color: #606060;
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  .favorite-button {
+    padding: 5px;
+  }
+}
